@@ -21,6 +21,12 @@ class MainFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentMainBinding.inflate(inflater, container, false)
+
+//        //このような書き方もある
+//        binding = DataBindingUtil.inflate(
+//            inflater, R.layout.fragment_football, container, false
+//        )
+
         binding.viewModel = viewModel
         //LiveDataが，値の更新を検知できるようにする．
         binding.lifecycleOwner = this
